@@ -1,11 +1,10 @@
 const router = require("express").Router();
 
-const { getAllThoughts, getThouhgtById addThought, getAllUsers, getUserById, updateUser, } = require("../../controllers/user-controller");
+const { getAllThoughts, getThoughtById, addThought, removeThought } = require("../../controllers/user-controller");
 
-router.route("/").get(getAllUsers).post(createUser);
+router.route("/").get(getAllThoughts).post(addThought);
 
-router.route("/:userId").get(getUserById).put(updateUser);
+router.route("/:thoughtId").get(getThoughtById).put(updateThought).delete(removeThought);
 
-// 
 
 module.exports = router;
