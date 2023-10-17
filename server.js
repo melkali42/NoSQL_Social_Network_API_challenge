@@ -11,7 +11,7 @@ app.use(express.static("public"));
 app.use(bodyParser.json());
 
 mongoose.connect(
-    process.env.MONGOBD_URI || "mongodb://localhost/social-network",
+    process.env.MONGOBD_URI || "mongodb://localhost/social-network-api",
     {
         // useFindAndModify: false, 
         UseNewUrlParser: true, 
