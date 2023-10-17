@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 mongoose.connect(
     process.env.MONGOBD_URI || "mongodb://localhost/social-network",
     {
-        useFindAndModify: false, 
+        // useFindAndModify: false, 
         UseNewUrlParser: true, 
         useUnifiedTopology: true, 
     }
